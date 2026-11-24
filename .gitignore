@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+*.env
+
+# Data, models and experiment artefacts (not redistributed)
+data/
+datasets/
+models/
+*.pt
+*.pth
+*.h5
+*.keras
+*.pkl
+*.npy
+mlruns/
+outputs/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
