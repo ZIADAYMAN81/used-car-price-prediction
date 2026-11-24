@@ -1,6 +1,6 @@
 # Used Car Price Prediction
 
-> Machine Learning coursework, The British University in Egypt. Team of 3. I implemented the data-cleaning, feature-engineering and model-tuning pipeline in this notebook.
+> Machine Learning coursework, The British University in Egypt.
 
 Predicting the resale price of used cars from listing data, with a lot of feature engineering on messy free-text fields.
 
