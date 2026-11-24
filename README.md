@@ -36,6 +36,8 @@ XGBoost was tuned with randomized search over 50 configurations and 5-fold cross
 
 Fixing both should improve on the current scores. They're documented here rather than hidden.
 
+**Fixed in this version:** the original run stopped while drawing the prediction plots, because the plot label `XGBoost` didn't match the results-table name `XGBoost (RandomizedSearchCV)`. The label is corrected in the notebook. All reported metrics were printed before that point and are unaffected. The plots and feature-importance charts will appear when the notebook is re-run with the dataset.
+
 ## Run it
 ```bash
 pip install -r requirements.txt
