@@ -25,3 +25,7 @@ outputs/
 Thumbs.db
 .vscode/
 .idea/
+.pytest_cache/
+*.parquet
+*.joblib
+*.ubj

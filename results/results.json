@@ -1,0 +1,213 @@
+{
+  "data": "cars.com used-car listings, October 2026 (KTHESAT/usa-used-car-market-cars-com, CC BY 4.0)",
+  "cleaning_steps": {
+    "raw": 1614161,
+    "used_with_specifications": 418997,
+    "after_removing_duplicate_vins": 416665,
+    "after_plausibility_rules": 413083
+  },
+  "rows_used": 413083,
+  "split": {
+    "train": 330466,
+    "validation": 41308,
+    "test": 41309
+  },
+  "device": "cuda",
+  "trees": 2919,
+  "xgboost_fit_seconds": 36.2,
+  "results": {
+    "Median price of same make, model and year": {
+      "rmse_log": 0.187,
+      "r2_log": 0.8814,
+      "r2_dollars": 0.8811,
+      "mae_dollars": 3513.0285,
+      "median_abs_pct_error": 0.0859,
+      "within_10pct": 0.5587
+    },
+    "Ridge regression (one-hot)": {
+      "rmse_log": 0.1348,
+      "r2_log": 0.9384,
+      "r2_dollars": 0.931,
+      "mae_dollars": 2596.2199,
+      "median_abs_pct_error": 0.0658,
+      "within_10pct": 0.6774
+    },
+    "XGBoost (target-encoded models)": {
+      "rmse_log": 0.1037,
+      "r2_log": 0.9635,
+      "r2_dollars": 0.9658,
+      "mae_dollars": 1842.7928,
+      "median_abs_pct_error": 0.0471,
+      "within_10pct": 0.794
+    }
+  },
+  "error_by_price_band": [
+    {
+      "band": "$0-9,999",
+      "cars": 2161,
+      "median_abs_pct_error": 0.1121
+    },
+    {
+      "band": "$10,000-19,999",
+      "cars": 9738,
+      "median_abs_pct_error": 0.0635
+    },
+    {
+      "band": "$20,000-29,999",
+      "cars": 12332,
+      "median_abs_pct_error": 0.0433
+    },
+    {
+      "band": "$30,000-49,999",
+      "cars": 12524,
+      "median_abs_pct_error": 0.0398
+    },
+    {
+      "band": "$50,000-79,999",
+      "cars": 4125,
+      "median_abs_pct_error": 0.0368
+    },
+    {
+      "band": "$80,000-200,000",
+      "cars": 429,
+      "median_abs_pct_error": 0.0672
+    }
+  ],
+  "top_features_by_gain": {
+    "avg_price_make_model_trim": 7.03,
+    "year": 5.34,
+    "avg_price_make_model": 3.19,
+    "age": 3.17,
+    "mileage": 1.47,
+    "listings_make": 0.86,
+    "engine_size": 0.57,
+    "log_mileage": 0.55,
+    "cylinders": 0.53,
+    "avg_price_make": 0.45,
+    "drivetrain": 0.42,
+    "fuel": 0.26
+  },
+  "deals_in_test_set": [
+    {
+      "make_model_trim": "Ford Transit-350 XLT",
+      "year": 2020.0,
+      "mileage": 10000.0,
+      "price": 8999.0,
+      "predicted_price": 39050.0,
+      "discount": 0.77
+    },
+    {
+      "make_model_trim": "Nissan Pathfinder SL",
+      "year": 2024.0,
+      "mileage": 48964.0,
+      "price": 10479.0,
+      "predicted_price": 29830.0,
+      "discount": 0.649
+    },
+    {
+      "make_model_trim": "Chevrolet Equinox 1LT",
+      "year": 2024.0,
+      "mileage": 25469.0,
+      "price": 9900.0,
+      "predicted_price": 24860.0,
+      "discount": 0.602
+    },
+    {
+      "make_model_trim": "GMC Sierra 1500 AT4",
+      "year": 2024.0,
+      "mileage": 51726.0,
+      "price": 21479.0,
+      "predicted_price": 50750.0,
+      "discount": 0.577
+    },
+    {
+      "make_model_trim": "Nissan Pathfinder SL",
+      "year": 2025.0,
+      "mileage": 10823.0,
+      "price": 14479.0,
+      "predicted_price": 34120.0,
+      "discount": 0.576
+    },
+    {
+      "make_model_trim": "GMC Yukon XL Denali",
+      "year": 2017.0,
+      "mileage": 138462.0,
+      "price": 8576.0,
+      "predicted_price": 19950.0,
+      "discount": 0.57
+    },
+    {
+      "make_model_trim": "Kia Telluride EX X-Line",
+      "year": 2024.0,
+      "mileage": 38143.0,
+      "price": 15479.0,
+      "predicted_price": 35180.0,
+      "discount": 0.56
+    },
+    {
+      "make_model_trim": "Lexus SC 430 Base",
+      "year": 2005.0,
+      "mileage": 99930.0,
+      "price": 7999.0,
+      "predicted_price": 17990.0,
+      "discount": 0.555
+    },
+    {
+      "make_model_trim": "Toyota Tacoma SR",
+      "year": 2025.0,
+      "mileage": 15916.0,
+      "price": 14479.0,
+      "predicted_price": 31710.0,
+      "discount": 0.543
+    },
+    {
+      "make_model_trim": "Ford F-350 XLT",
+      "year": 2006.0,
+      "mileage": 86721.0,
+      "price": 9999.0,
+      "predicted_price": 20920.0,
+      "discount": 0.522
+    },
+    {
+      "make_model_trim": "GMC Sierra 1500 Club Coupe",
+      "year": 1996.0,
+      "mileage": 131128.0,
+      "price": 7498.0,
+      "predicted_price": 15600.0,
+      "discount": 0.519
+    },
+    {
+      "make_model_trim": "Honda Accord Hybrid Sport",
+      "year": 2024.0,
+      "mileage": 27395.0,
+      "price": 13999.0,
+      "predicted_price": 29060.0,
+      "discount": 0.518
+    },
+    {
+      "make_model_trim": "Hyundai SANTA FE SEL",
+      "year": 2026.0,
+      "mileage": 17574.0,
+      "price": 14979.0,
+      "predicted_price": 30570.0,
+      "discount": 0.51
+    },
+    {
+      "make_model_trim": "Honda CR-V EX",
+      "year": 2014.0,
+      "mileage": 173103.0,
+      "price": 5063.0,
+      "predicted_price": 10240.0,
+      "discount": 0.506
+    },
+    {
+      "make_model_trim": "Nissan Rogue S",
+      "year": 2024.0,
+      "mileage": 32802.0,
+      "price": 10900.0,
+      "predicted_price": 21870.0,
+      "discount": 0.502
+    }
+  ],
+  "runtime_seconds": 58.6
+}
