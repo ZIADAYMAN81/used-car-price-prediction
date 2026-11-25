@@ -1,5 +1,7 @@
 # Used Car Price Prediction
 
+[![tests](https://github.com/ZIADAYMAN81/used-car-price-prediction/actions/workflows/tests.yml/badge.svg)](https://github.com/ZIADAYMAN81/used-car-price-prediction/actions/workflows/tests.yml)
+
 > Machine Learning coursework, The British University in Egypt, 2025, rebuilt and retrained. Author: Ziad Ayman.
 
 Predicting the price of a used car from its listing: make, model, trim, year, mileage and the messy free-text engine, transmission and colour fields. Trained on **413,083 real cars.com listings** on the GPU, it estimates a car's price with a **median error of 4.7%** and explains **96.6%** of the variation in price.
@@ -92,3 +94,6 @@ The original notebook (kept in `notebooks/`) had two bugs found in review, both 
 
 ## Tech stack
 Python · pandas · scikit-learn · XGBoost (CUDA) · NumPy · matplotlib · pytest
+
+## License
+MIT, see [LICENSE](LICENSE).
